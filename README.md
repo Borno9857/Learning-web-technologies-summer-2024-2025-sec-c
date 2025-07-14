@@ -1,0 +1,1 @@
+# Learning-web-technologies-summer-2024-2025-sec-c

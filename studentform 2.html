@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>General Information of Student Profile</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+    }
+
+    h2 {
+
+      text-align: center;
+
+      margin-bottom: 20px;
+
+      text-decoration: underline;
+
+    }
+
+    table {
+
+      width: 80%;
+
+      margin: auto;
+
+      border-collapse: collapse;
+
+      border: 1px solid black;
+
+    }
+
+    td {
+
+      border: 1px solid black;
+
+      padding: 10px;
+
+    }
+
+    input[type="text"],
+
+    input[type="date"],
+
+    input[type="email"],
+
+    input[type="tel"],
+
+    select,
+
+    textarea {
+
+      width: 95%;
+
+      padding: 5px;
+
+    }
+
+    .submit-row {
+
+      text-align: center;
+
+    }
+
+    input[type="submit"] {
+
+      padding: 8px 20px;
+
+      margin: 15px;
+
+      font-weight: bold;
+
+      border: 1px solid black;
+
+      background-color: #f0f0f0;
+
+    }
+
+    .section-title {
+
+      font-weight: bold;
+
+      text-align: center;
+
+      background-color: #ddd;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h2>General Information of Student Profile</h2>
+
+  <form>
+
+    <table>
+
+
+      <tr><td colspan="2" class="section-title">Step 1: Name</td></tr>
+
+      <tr>
+
+        <td>First Name:</td>
+
+        <td><input type="text" name="first_name"></td>
+
+      </tr>
+
+      <tr>
+
+        <td>Last Name:</td>
+
+        <td><input type="text" name="last_name"></td>
+
+      </tr>
+
+     
+
+      <tr><td colspan="2" class="section-title">Step 2: Gender</td></tr>
+
+      <tr>
+
+        <td>Gender:</td>
+
+        <td>
+
+          <input type="radio" name="gender" value="male"> Male
+
+          <input type="radio" name="gender" value="female"> Female
+
+          <input type="radio" name="gender" value="other"> Other
+
+        </td>
+
+      </tr>
+
+
+
+      <tr><td colspan="2" class="section-title">Step 3: Date of Birth</td></tr>
+
+      <tr>
+
+        <td>Date of Birth:</td>
+
+        <td><input type="date" name="dob"></td>
+
+      </tr>
+
+  
+
+      <tr><td colspan="2" class="section-title">Step 4: Email</td></tr>
+
+      <tr>
+
+        <td>Email Address:</td>
+
+        <td><input type="email" name="email"></td>
+
+      </tr>
+
+  
+
+      <tr><td colspan="2" class="section-title">Step 5: Contact Number</td></tr>
+
+      <tr>
+
+        <td>Phone Number:</td>
+
+        <td><input type="tel" name="phone"></td>
+
+      </tr>
+
+     
+
+      <tr><td colspan="2" class="section-title">Step 6: Address</td></tr>
+
+      <tr>
+
+        <td>Address:</td>
+
+        <td><textarea name="address" rows="3"></textarea></td>
+
+      </tr>
+
+     
+
+      <tr><td colspan="2" class="section-title">Step 7: Nationality</td></tr>
+
+      <tr>
+
+        <td>Nationality:</td>
+
+        <td><input type="text" name="nationality"></td>
+
+      </tr>
+
+      
+
+      <tr><td colspan="2" class="section-title">Step 8: Summary (After Submission)</td></tr>
+
+      <tr>
+
+        <td colspan="2" style="text-align: center;">(Submitted info will be displayed after submission.)</td>
+
+      </tr>
+
+   
+
+      <tr>
+
+        <td colspan="2" class="submit-row">
+
+          <input type="submit" value="Submit Profile">
+
+        </td>
+
+      </tr>
+
+    </table>
+
+  </form>
+
+</body>
+
+</html>

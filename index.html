@@ -1,26 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Login</title>
+  <title>Calculator</title>
 </head>
-<body>
-    <h2>Login Form</h2>
-    <form action="/login" method="post">
-        <table>
-            <tr>
-                <td>Username:</td>
-                <td><input type="text" name="username" required></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input type="password" name="password" required></td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align:center;">
-                    <input type="submit" value="Login">
-                </td>
-            </tr>
-        </table>
-    </form>
+<body style="font-family: Arial, sans-serif; max-width: 450px; margin: 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+
+  <h2 style="text-align: center; color: #333;">Calculator</h2>
+
+  <input 
+    type="number" 
+    id="num1" 
+    placeholder="First Number" 
+    style="width: 140px; height: 38px; padding: 8px 12px; margin-right: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; 
+           box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); background-color: #e6f0ff; "
+           
+  >
+
+  <select 
+    id="operator" 
+    style="padding: 8px 12px; margin-right: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;"
+  >
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+
+  <input 
+    type="number" 
+    id="num2" 
+    placeholder="Second Number" 
+    style="width: 140px; height: 38px; padding: 8px 12px; margin-right: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; 
+           box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); background-color: #e6f0ff;"
+          
+  >
+
+  <button 
+     onclick="calculate()" 
+    style="margin-top: 20px; padding: 8px 20px; font-size: 15px; background-color: #007BFF; color: white; border: none; border-radius: 5px; "
+  >=</button>
+
+  <h3 style="margin-top: 20px; color: #444;">Result: <span id="result"></span></h3>
+
+  <script>
+    function calculate() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      const op = document.getElementById("operator").value;
+      let result;
+      if (op === "+") result = n1 + n2;
+      else if (op === "-") result = n1 - n2;
+      else if (op === "*") result = n1 * n2;
+      else if (op === "/") result = n2 !== 0 ? n1 / n2 : "Error (divide by 0)";
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+
 </body>
 </html>

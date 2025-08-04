@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>My Profile</title>
+
+  <script src="script.js" defer></script>
+
+</head>
+
+<body style="margin:0; padding:0; font-family:Arial, sans-serif; background:#eef2f5;">
+
+  <div style="width:360px; margin:50px auto; padding:20px; background:#fff; 
+
+              border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+
+    <h2 style="margin-bottom:15px;">My Profile</h2>
+
+    <div id="showPic" style="width:120px; height:120px; margin:0 auto 15px; 
+
+                             overflow:hidden; border:1px solid #ccc; border-radius:4px;">
+
+      <img id="pic" src="" style="width:auto; height:100%; object-fit:cover;">
+
+    </div>
+
+    <p><strong>Name:</strong> <span id="showName"></span></p>
+
+    <p><strong>Email:</strong> <span id="showEmail"></span></p>
+
+    <p><strong>Password:</strong> ********</p>
+
+    <div style="margin-top:20px; display:flex; justify-content:space-around;">
+
+      <button id="editBtn"
+
+              style="padding:8px 12px; background:#007bff; color:#fff; border:none; 
+
+                     border-radius:4px; cursor:pointer;">
+
+        Edit Profile
+
+      </button>
+
+      <button id="forgotBtn"
+
+              style="padding:8px 12px; background:#dc3545; color:#fff; border:none; 
+
+                     border-radius:4px; cursor:pointer;">
+
+        Forgot Password
+
+      </button>
+
+    </div>
+
+    <div id="pwdMsg" style="color:green; margin-top:15px;"></div>
+
+  </div>
+
+</body>
+
+</html>

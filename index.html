@@ -1,60 +1,71 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-  <title>Calculator</title>
+
+  <meta charset="utf-8">
+
+  <title>Profile Description</title>
+
+  <script src="script.js" defer></script>
+
 </head>
-<body style="font-family: Arial, sans-serif; max-width: 450px; margin: 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
 
-  <h2 style="text-align: center; color: #333;">Calculator</h2>
+<body style="margin:0; padding:0; font-family:Arial, sans-serif; background:#f2f2f2;">
 
-  <input 
-    type="number" 
-    id="num1" 
-    placeholder="First Number" 
-    style="width: 140px; height: 38px; padding: 8px 12px; margin-right: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; 
-           box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); background-color: #e6f0ff; "
-           
-  >
+  <div style="width:360px; margin:50px auto; padding:20px; background:#fff; 
 
-  <select 
-    id="operator" 
-    style="padding: 8px 12px; margin-right: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;"
-  >
-    <option value="+">+</option>
-    <option value="-">-</option>
-    <option value="*">*</option>
-    <option value="/">/</option>
-  </select>
+              border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
-  <input 
-    type="number" 
-    id="num2" 
-    placeholder="Second Number" 
-    style="width: 140px; height: 38px; padding: 8px 12px; margin-right: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; 
-           box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); background-color: #e6f0ff;"
-          
-  >
+    <h2 style="text-align:center; margin-bottom:20px;">Profile Description</h2>
 
-  <button 
-     onclick="calculate()" 
-    style="margin-top: 20px; padding: 8px 20px; font-size: 15px; background-color: #007BFF; color: white; border: none; border-radius: 5px; "
-  >=</button>
+    <form id="profileForm" style="display:flex; flex-direction:column; gap:12px;">
 
-  <h3 style="margin-top: 20px; color: #444;">Result: <span id="result"></span></h3>
+      <input type="text" id="name" placeholder="Full Name"
 
-  <script>
-    function calculate() {
-      const n1 = parseFloat(document.getElementById("num1").value);
-      const n2 = parseFloat(document.getElementById("num2").value);
-      const op = document.getElementById("operator").value;
-      let result;
-      if (op === "+") result = n1 + n2;
-      else if (op === "-") result = n1 - n2;
-      else if (op === "*") result = n1 * n2;
-      else if (op === "/") result = n2 !== 0 ? n1 / n2 : "Error (divide by 0)";
-      document.getElementById("result").innerText = result;
-    }
-  </script>
+             style="padding:8px; border:1px solid #ccc; border-radius:4px;">
+
+      <input type="text" id="email" placeholder="Email"
+
+             style="padding:8px; border:1px solid #ccc; border-radius:4px;">
+
+      <input type="password" id="password" placeholder="New Password"
+
+             style="padding:8px; border:1px solid #ccc; border-radius:4px;">
+
+      <label style="font-size:14px;">Profile Picture:</label>
+
+      <input type="file" id="avatar" accept="image/*">
+
+      <!-- square “crop” preview -->
+
+      <div id="preview" style="width:120px; height:120px; margin:auto; 
+
+                              overflow:hidden; border:1px solid #ccc; border-radius:4px;">
+
+        <img id="previewImg" src="" 
+
+             style="width:auto; height:100%; object-fit:cover; display:none;">
+
+      </div>
+
+      <button type="submit"
+
+              style="padding:10px; background:#28a745; color:#fff; border:none; 
+
+                     border-radius:4px; cursor:pointer;">
+
+        Save Changes
+
+      </button>
+
+      <div id="msg" style="color:red; text-align:center;"></div>
+
+    </form>
+
+  </div>
 
 </body>
+
 </html>

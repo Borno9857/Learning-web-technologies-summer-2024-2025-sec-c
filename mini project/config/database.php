@@ -1,0 +1,1 @@
+define("USER_FILE", _DIR_ . "/../users.txt");
